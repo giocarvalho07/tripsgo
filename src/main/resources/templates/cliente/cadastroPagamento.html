@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>tripsGo</title>
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
+    </script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+
+
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper">
+            <img alt="" width="90" src="img/logo.svg" >
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa fa-bars"></i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a th:href="@{/cadastro}" > Cadastro </a></li>
+                <li><a th:href="@{/cliente}" > Hotel </a></li>
+                <li><a href="mobile.html"></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+         <li><a th:href="@{/cadastro}" > Cadastro </a></li>
+         <li><a th:href="@{/cliente}" > Hotel </a></li>
+         <li><a href="mobile.html"></a></li>
+    </ul>
+
+
+    <div class="section white ">
+        <div class="row container header center-align">
+           <img alt=""  width="90" src="img/logo.png" >
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="row">
+            <div class="col s3"></div>
+            <form class="col s6">
+                <div class="row">
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email"> Cconfirmação do pagamento por email</label>
+                        </div>
+                    </div>
+
+
+                    <div class="input-field col s12">
+                        <select>
+                      <option value="" disabled selected>Escolha seu meio de pagamento</option>
+                      <option value="1">PIX</option>
+                      <option value="2">Boleto</option>
+                      <option value="3">A Vista</option>
+                      <option value="4">Credito</option>
+                      <option value="5">Debito</option>
+                    </select>
+
+                    </div>
+
+                    <div class="row center-align">
+                        <a th:href="@{/pagamento-confirmado}" class="waves-effect waves-light btn-large pulse">
+                        realizar pagamento  <i class="fa fa-arrow-right"></i>
+                    </a>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>
+
+
+</html>

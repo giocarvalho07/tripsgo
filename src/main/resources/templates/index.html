@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>tripsGo</title>
+
+       <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.parallax');
+        var instances = M.Parallax.init(elems);
+    });
+</script>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper">
+            <img alt="" width="90" src="img/logo.svg" >
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa fa-bars"></i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a th:href="@{/cadastro}" > Cadastro </a></li>
+                <li><a th:href="@{/cliente}" > Hotel </a></li>
+                <li><a href="mobile.html"></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+         <li><a th:href="@{/cadastro}" > Cadastro </a></li>
+         <li><a th:href="@{/cliente}" > Hotel </a></li>
+         <li><a href="mobile.html"></a></li>
+    </ul>
+
+
+
+
+
+    <div class="parallax-container">
+        <div class="parallax">
+            <img width="250" src="img/pexels-suzukii-xingfu-239520.jpg ">
+        </div>
+    </div>
+    <div class="section white ">
+        <div class="row container header center-align">
+            <img alt=""  width="90" src="img/logo.png" >
+            <p class="grey-text text-darken-3 lighten-3 ">
+                Conheça agora mesmo o TripsGo um App de viagem que tem um sistema de checkin inteligente. Usamos IOT para realizar toda consulta e rastreio de sua hospedagem até a sua liberação via Qr-code. Queremos que a sua experiência em nosso App seja única, segura
+                e divertida.
+
+            </p>
+            <a th:href="@{/cadastro}" class="waves-effect waves-light btn-large pulse">
+                <i class="fa fa-plus-square" aria-hidden="true">
+                    
+                </i> Ver mais
+            </a>
+        </div>
+    </div> 
+    <div class="parallax-container ">
+        <div class="parallax ">
+            <img width="250 " src="img/pexels-kenneth-carpina-2468773.jpg ">
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>
+
+
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>tripsGo</title>
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
+    </script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper">
+            <img alt="" width="90" src="img/logo.svg" >
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa fa-bars"></i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a th:href="@{/cadastro}" > Cadastro </a></li>
+                <li><a th:href="@{/cliente}" > Hotel </a></li>
+                <li><a href="mobile.html"></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+         <li><a th:href="@{/cadastro}" > Cadastro </a></li>
+         <li><a th:href="@{/cliente}" > Hotel </a></li>
+         <li><a href="mobile.html"></a></li>
+    </ul>
+
+
+    <div class="section white ">
+        <div class="row container header center-align">
+            <img alt=""  width="90" src="img/logo.png" >
+        </div>
+    </div>
+
+
+    <div class="section ">
+        <div class="row">
+            <div class="col s3"></div>
+            <table class="striped col s6">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Item Name</th>
+                        <th>Item Price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td th:text="${hotel}"></td>
+                        <td>5</td>
+                        <td> 238,99 </td>
+                    </tr>
+                    <tr>
+                        <td th:text="${hotelX}"></td>
+                        <td>2</td>
+                        <td th:text="${price}"></td>
+                    </tr>
+                    <tr>
+                        <td th:text="${hotelY}" ></td>
+                        <td> 3 </td>
+                        <td> 75,98</td>
+                    </tr>
+                    <tr>
+                        <td th:text="${hotelZ}" ></td>
+                        <td> 4 </td>
+                        <td th:text="${priceX }"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            
+             
+            
+        </div>
+    </div>
+    
+    <div class="row center-align">
+    	<a th:href="@{/}" class="waves-effect teal darken-4 btn-large pulse">
+    		Menu <i class="fa fa-arrow-right"></i>
+    	</a>
+    </div>
+
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>
+
+
+</html>
