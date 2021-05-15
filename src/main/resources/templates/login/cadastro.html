@@ -38,7 +38,7 @@
     <nav>
         <div class="nav-wrapper">
             <img alt="" width="90" src="img/logo.svg" >
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa fa-bars"></i></a>
+            <a th:href="@{/}" data-target="mobile-demo" class="sidenav-trigger"><i class="fa fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a th:href="@{/cadastro}" > Cadastro </a></li>
                 <li><a th:href="@{/cliente}" > Hotel </a></li>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="input-field col s6">
                         <input id="SobreNome" type="text" class="validate" required>
-                        <label for="SobreNome">Sobre Nome</label>
+                        <label for="SobreNome">Sobrenome</label>
                     </div>
                 </div>
                 <div class="row">
