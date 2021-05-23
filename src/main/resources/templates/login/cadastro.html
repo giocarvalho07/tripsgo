@@ -25,6 +25,17 @@
             var elems = document.querySelectorAll('select');
             var instances = M.FormSelect.init(elems);
         });
+        
+        function selectedOption() {
+            const enums = {
+              1:'/cliente',
+              2:'/administrador'
+              }
+
+            const value = document.querySelector("select").value;
+            const buttonEl = document.getElementById('btn-save')
+            buttonEl.setAttribute('href', enums[value])
+          }
     </script>
 
     <!-- Compiled and minified CSS -->
@@ -98,7 +109,7 @@
 
 
                 <div class="input-field col s12" >
-                    <select>
+                    <select onchange={selectedOption()}>
                       <option value="" disabled selected >Escolha seu perfil</option>
                       <option value="1">Usuário</option>
                       <option value="2">Administrador</option>
@@ -106,15 +117,12 @@
 
                 </div>
 
-                <div class="row center-align">
-                    <a th:href="@{/administrador}" class="waves-effect waves-light btn-large pulse">
-                        Salvar Adm  <i class="fa fa-arrow-right"></i>
-                    </a>
-                    
-                     <a th:href="@{/cliente}" class="waves-effect teal darken-4 btn-large pulse">
-                        Salvar Cliente <i class="fa fa-arrow-right"></i>
-                    </a>
 
+                
+                <div class="row center-align">
+                    <a class="waves-effect waves-light btn-large pulse" id="btn-save" href="#">
+                        Salvar<i class="fa fa-arrow-right"></i>
+                    </a>
                 </div>
 
         </form>
